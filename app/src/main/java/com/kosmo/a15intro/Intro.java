@@ -2,6 +2,7 @@ package com.kosmo.a15intro;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -38,6 +39,11 @@ public class Intro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
+
+        // Java코드에서 액션바 숨김처리 하기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
     }
 
     // 액티비티 실행시 3번째로 호출되는 수명주기 메소드
